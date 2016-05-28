@@ -229,7 +229,7 @@
             var today = new Date().toISOString().split('T')[0];
             var tomorrowLocal = new Date(new Date().getTime() + 24 * 60 * 60 * 1000 - new Date().getTimezoneOffset() * 60 * 1000).toISOString().substr(0, 10);
             document.getElementById('DateValid').setAttribute('min', tomorrowLocal);
-            document.getElementById('BirthDate').setAttribute('max', today);
+//            document.getElementById('BirthDate').setAttribute('max', today);
             document.getElementById('DateValid').setAttribute('value', tomorrowLocal);
 
         </script>
