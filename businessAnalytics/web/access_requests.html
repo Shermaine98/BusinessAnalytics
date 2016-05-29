@@ -389,102 +389,76 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Requests</h3>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Requests</h3>
 
-              <div class="box-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+                        <div class="box-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                  </div>
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <tbody><tr>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                    <th>Username</th>
+                                    <th>Reason</th>
+                                    <th>End of Access Date</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>johndoe@gmail.com</td>
+                                    <td>johndoe</td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-success">Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Alexander Pierce</td>
+                                    <td>alexp@usg.com</td>
+                                    <td>alexP</td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-warning">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bob Doe</td>
+                                    <td>bobdoe657@gmail.com</td>
+                                    <td>bob_1990</td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-primary">Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Mike Doe</td>
+                                    <td>mikemikedoe@yahoo.com</td>
+                                    <td>michael912</td>
+                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                                    <td>11-7-2014</td>
+                                    <td><span class="label label-danger">Denied</span></td>
+                                </tr>
+                            </tbody></table>
+                    </div>
+                    <!-- /.box-body -->
                 </div>
-              </div>
+                <!-- /.box -->
             </div>
-            <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
-              <table class="table table-hover">
-                <tbody><tr>
-                  <th>Full Name</th>
-                  <th>Email</th>
-                  <th>Username</th>
-                  <th>Reason</th>
-                  <th>End of Access Date</th>
-                  <th>Status</th>
-                </tr>
-                <tr>
-                  <td>John Doe</td>
-                  <td>johndoe@gmail.com</td>
-                  <td>johndoe</td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-success">Approved</span></td>
-                </tr>
-                <tr>
-                  <td>Alexander Pierce</td>
-                  <td>alexp@usg.com</td>
-                  <td>alexP</td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-warning">Pending</span></td>
-                </tr>
-                <tr>
-                  <td>Bob Doe</td>
-                  <td>bobdoe657@gmail.com</td>
-                  <td>bob_1990</td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-primary">Approved</span></td>
-                </tr>
-                <tr>
-                  <td>Mike Doe</td>
-                  <td>mikemikedoe@yahoo.com</td>
-                  <td>michael912</td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-danger">Denied</span></td>
-                </tr>
-              </tbody></table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
         </div>
-      </div>
-</section>
-  </div>
+    </section>
   <!-- /.content-wrapper -->
-  
-  <!-- /.MODAL -->
-  <div class="example-modal">
-      <div class="modal fade" id='myModal'>
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span></button>
-                      <h3>Access Request</h3>
-                  </div>
-                  <div class="modal-body">
-                      <h5 id='fullname' />
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-primary" data-dismiss="modal">Approve</button>
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Disapprove</button>
-                  </div>
-              </div>
-              <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
   </div>
   
-  <!-- /.Model-end -->
   
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
@@ -689,13 +663,6 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
-
-<script>
-    $('table tbody tr  td').on('click',function(){
-    $("#myModal").modal("show");
-//    $("#txtfname").val($(this).closest('tr').children()[0].textContent);
-});
-</script>
 
 <!-- jQuery 2.2.0 -->
 <script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
