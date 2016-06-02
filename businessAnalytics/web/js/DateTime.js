@@ -32,8 +32,7 @@ tenYears.setFullYear(tenYears.getFullYear() - 12);
 var dMonth = tenYears.getMonth() + 1;
 var dYear = tenYears.getFullYear();
 var dDay = tenYears.getDate();
-
-var birthdate = dYear + "-" + dMonth + "-" + dDay;
+var birthdate = tenYears.toISOString().substring(0,10);
 
 document.getElementById('Birthdate').setAttribute('max', birthdate);
 document.getElementById('Birthdate').value = tenYears.toISOString().substring(0,10);
