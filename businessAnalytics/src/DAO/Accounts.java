@@ -69,10 +69,10 @@ public class Accounts {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
 
-            String query = "select * from accounts where FirstName = ? and LastName = ?";
+            String query = "select * from accounts where username = ? and password = ?";
             PreparedStatement pstmt = conn.prepareStatement(query);
 
-            pstmt.setString(1, User.getEmail());
+            pstmt.setString(1, User.getUsername());
             pstmt.setString(2, User.getPassword());
 
             ResultSet rs = pstmt.executeQuery();
@@ -94,18 +94,20 @@ public class Accounts {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("select * from accounts where "
-//                    + "FirstName= ? and LastName= password(?)");
-                    + "FirstName = ? and LastName = ?");
+                    + "username = ? and password = password(?)");
             pstmt.setString(1, username);
             pstmt.setString(2, password);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
 
-                User.setUserID(rs.getInt("employeeID"));
-                User.setLastName(rs.getString("lastName"));
+                User.setUserID(rs.getInt("userID"));
+                User.setDivision(rs.getString("division"));
                 User.setFirstName(rs.getString("firstName"));
+                User.setLastName(rs.getString("lastName"));
+                User.setGender(rs.getString("gender"));
                 User.setBirthdate(rs.getDate("birthdate"));
                 User.setEmail(rs.getString("email"));
+                User.setUsername(rs.getString("username"));
                 User.setPassword(rs.getString("password"));
             }
 

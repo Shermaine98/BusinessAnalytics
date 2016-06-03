@@ -15,6 +15,7 @@ public class User {
     private int userID;
     private String firstName;
     private String lastName;
+    private String gender;
     private Date birthdate;
     private Date employment;
     private String division;
@@ -176,5 +177,19 @@ public class User {
      */
     public void setUserID(int userID) {
         this.userID = userID;
+    }
+
+    /**
+     * @return the gender
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
+     * @param gender the gender to set
+     */
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
