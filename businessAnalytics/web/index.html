@@ -75,15 +75,24 @@
             </form>
             <!-- END LOGIN FORM -->        
             <!-- BEGIN REGISTRATION FORM -->
-            <form class="form-vertical register-form" action="index.html" method="post">
+            <form class="form-vertical register-form" action="RegisterServlet" method="post">
                 <h3 >Sign Up</h3>
                 <p>Enter your personal details below:</p>
                 <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Full Name</label>
+                    <label class="control-label visible-ie8 visible-ie9">First Name</label>
                     <div class="controls">
                         <div class="input-icon left">
                             <i class="icon-font"></i>
-                            <input class="m-wrap placeholder-no-fix" type="text" placeholder="Full Name" name="fullname"/>
+                            <input class="m-wrap placeholder-no-fix" type="text" placeholder="First Name" name="firstName"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label visible-ie8 visible-ie9">Last Name</label>
+                    <div class="controls">
+                        <div class="input-icon left">
+                            <i class="icon-font"></i>
+                            <input class="m-wrap placeholder-no-fix" type="text" placeholder="Last Name" name="lastName"/>
                         </div>
                     </div>
                 </div>
@@ -105,7 +114,7 @@
                     <div class="controls">
                         <div class="input-icon left">
                             <i class="icon-calendar"></i>
-                            <input class="m-wrap placeholder-no-fix" id="Birthdate" type="date" name="Birthdate" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
+                            <input class="m-wrap placeholder-no-fix" id="Birthdate" type="date" name="birthdate" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
                         </div>
                     </div>
                 </div>

@@ -29,25 +29,18 @@ public class Accounts {
         try {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
-            String query = "insert into accounts"
-//                    + "(employeeID,lastName,firstName,email,position,gender,birthDate,leftDate,entryDate,password) "
-//                    + "values (?,?,?,?,?,?,?,?,?,password(?))";
-                    + "IdAccounts, FirstName, LastName, Division, Birthdate, Type";
+            String query = "insert into accounts "
+                    + "(division, firstName, lastName, gender, birthdate, email, username, password)"
+                    + "values (?,?,?,?,?,?,?,password(?))";
             PreparedStatement pstmt = conn.prepareStatement(query);
             
-            boolean type = false;
-            //Type is true if not part of any division
-            if(user.getDivision().equalsIgnoreCase("Others"));
-                type = true;
-
-            pstmt.setInt(1, user.getUserID());
-            pstmt.setString(2, user.getFirstName());
-            pstmt.setString(3, user.getLastName());
-            pstmt.setString(4, user.getDivision());
-            pstmt.setDate(5, user.getBirthdate());
-            pstmt.setBoolean(6, type);
-      
-             //username, password, employmentdate, etc.
+            pstmt.setString(1, user.getFirstName());
+            pstmt.setString(2, user.getLastName());
+            pstmt.setString(3, user.getGender());
+            pstmt.setDate(4, user.getBirthdate());
+            pstmt.setString(5, user.getEmail());
+            pstmt.setString(6, user.getUsername());
+            pstmt.setString(7, user.getPassword());
             
             int rows = pstmt.executeUpdate();
             conn.close();

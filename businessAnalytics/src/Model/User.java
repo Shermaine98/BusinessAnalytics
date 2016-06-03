@@ -6,6 +6,9 @@
 package Model;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -192,4 +195,13 @@ public class User {
     public void setGender(String gender) {
         this.gender = gender;
     }
+    
+    DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    public java.sql.Date javaToSQLdate(String date) throws ParseException{
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date birthdate = formatter.parse(date);
+        java.sql.Date sqlbirthdate = new java.sql.Date(birthdate.getTime());
+        return sqlbirthdate;
+    }
+    
 }
